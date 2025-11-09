@@ -1,34 +1,24 @@
-//Importamos los modulos necesarios de firebase
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-//Modulos de la base de datos: Cada uno de estos modulos nos permite realizar diferentes operaciones en la base de datos
-//Por ejemplo, "getDatabase" nos permite obtener una instancia de la base de datos, 
-// "ref" nos permite crear referencias a ubicaciones específicas en la base de datos,
-// "onValue" nos permite escuchar cambios en los datos en tiempo real, y 
-import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-
-//Importamos esta configuracion desde firebase
-//En la configuración del proyecto, elegimos la opción CDN 
-// y copiamos el fragmento de código que nos proporciona Firebase, sin las etiquetas <script>.
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    //Esta información corresponde a mi cuenta de firebase
-    //Cada proyecto tiene su propia configuración única
-    //Reemplazá los valores por los de tu propio proyecto de Firebase si estás siguiendo este ejemplo
-    apiKey: "INGRESA TU API KEY",
-    authDomain: "INGRESA TU AUTH DOMAIN",
-    databaseURL: "INGRESA TU DATABASE URL",
-    projectId: "INGRESA TU PROJECT ID",
-    storageBucket: "INGRESA TU STORAGE BUCKET",
-    messagingSenderId: "INGRESA TU MESSAGING SENDER ID",
-    appId: "INGRESA TU APP ID"
+  apiKey: "AIzaSyDZHn6Se1ApTB31radqTp0-hfyxiBX2RBA",
+  authDomain: "proyecto-49af0.firebaseapp.com",
+  projectId: "proyecto-49af0",
+  storageBucket: "proyecto-49af0.firebasestorage.app",
+  messagingSenderId: "540923423081",
+  appId: "1:540923423081:web:8df488c2dee967cd71f5f8",
+  measurementId: "G-4GB6ZXT352"
 };
 
-// Inicializamos la app de firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//Inicializamos la base de datos
-const db = getDatabase(app);
-
+const analytics = getAnalytics(app);
 //Referenciamos el elemento del DOM donde mostraremos la lista de tareas
 let tabla = document.querySelector(".tabla-estudiantes");
 
