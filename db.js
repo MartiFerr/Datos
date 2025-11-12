@@ -47,7 +47,7 @@ btnAgregar.onclick = function () {
     //Creamos una referencia a la ubicación "estudiantes" en la base de datos
     //Y con el dni como clave unica
     //Esto asegura que cada estudiante se almacene bajo su dni
-    let estudiantesRef = ref(db, 'estudiantes/' + inputDni.value);
+    let estudiantesRef = ref(db, 'huerta');
 
     //Usamos la función "set" para escribir los datos del nuevo estudiante en la base de datos
     //Le indicamos donde almacenar los datos y qué datos almacenar
